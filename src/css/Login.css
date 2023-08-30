@@ -1,0 +1,70 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+}
+
+.form-signin2 {
+    max-width: 550px;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.form-osebni-podatki {
+    max-width: 550px;
+    padding: 1rem;
+    height: fit-content;
+    background-color: #f0f0f0;
+}
+
+.form-signin .form-floating:focus-within {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: fit-content;
+}
+
+.footer{
+    background-color: #f0f0f0;
+    padding: 20px;
+    flex-shrink: 1;
+}
+
+.containerIzposoja{
+    background-color: rebeccapurple;
+    width: fit-content;
+    align-content: center;
+}
+
+.button12{
+    margin-bottom: 5%;
+}
+
+.error{
+    margin-top: 5%;
+}
