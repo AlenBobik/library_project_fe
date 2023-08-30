@@ -13,8 +13,8 @@ import UserData from "./pages/UserData.tsx";
 function App() {
   return (
     <>
-        <Wrapper>
-            <BrowserRouter>
+        <BrowserRouter>
+            <Wrapper>
                 <Routes>
                     <Route path={'/'} element={<Home/>} />
                     <Route path={'/register'} element={<Register/>} />
@@ -24,8 +24,8 @@ function App() {
                     <Route path={'/rezervacija/:isbn'} element={<Rezervacija/>} />
                     <Route path={'/userdata'} element={<UserData/>} />
                 </Routes>
-            </BrowserRouter>
-        </Wrapper>
+            </Wrapper>
+        </BrowserRouter>
     </>
   )
 }

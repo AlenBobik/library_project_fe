@@ -20,6 +20,10 @@ const Header = () => {
         navigation(`/poisciknjigo`);
     }
 
+    const toUserData = () => {
+        navigation(`/poisciknjigo`);
+    }
+
     return (
         <>
             {user && (
@@ -38,7 +42,7 @@ const Header = () => {
                     </ul>
 
                     <div className="col-md-3 text-end">
-                        <a href="/userdata" type="button" className="btn btn-outline-primary me-2">{user}</a>
+                        <a onClick={toUserData} type="button" className="btn btn-outline-primary me-2">{user}</a>
                         <a onClick={odjava} type="button" className="btn btn-primary link-dark" >odjava</a>
                     </div>
 
