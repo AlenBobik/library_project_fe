@@ -1,8 +1,23 @@
+import {useNavigate} from "react-router-dom";
+
 const Header = () => {
+    const navigation = useNavigate();
     const user = localStorage.getItem("username");
 
     const odjava = () => {
         localStorage.removeItem("username")
+    }
+
+    const toLogin = () => {
+        navigation(`/login`);
+    }
+
+    const toRegister = () => {
+        navigation(`/register`);
+    }
+
+    const toPoisciKnjgo = () => {
+        navigation(`/poisciknjigo`);
     }
 
     return (
@@ -19,12 +34,12 @@ const Header = () => {
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="/poisciknjigo" className="nav-link px-2">Poišči knjigo</a></li>
+                        <li><a onClick={toPoisciKnjgo} className="nav-link px-2">Poišči knjigo</a></li>
                     </ul>
 
                     <div className="col-md-3 text-end">
                         <a href="/userdata" type="button" className="btn btn-outline-primary me-2">{user}</a>
-                        <a href="/" type="button" className="btn btn-primary link-dark" onClick={odjava}>odjava</a>
+                        <a onClick={odjava} type="button" className="btn btn-primary link-dark" >odjava</a>
                     </div>
 
                     <a></a>
@@ -43,12 +58,12 @@ const Header = () => {
 
                     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="/" className="nav-link px-2 link-secondary">Home</a></li>
-                        <li><a href="/poisciknjigo" className="nav-link px-2">Poišči knjigo</a></li>
+                        <li><a onClick={toPoisciKnjgo} className="nav-link px-2">Poišči knjigo</a></li>
                     </ul>
 
                     <div className="col-md-3 text-end">
-                        <a href="/login" type="button" className="btn btn-outline-primary me-2">Prijava</a>
-                        <a href="/register" type="button" className="btn btn-primary link-dark">Registracija</a>
+                        <a onClick={toLogin} type="button" className="btn btn-outline-primary me-2">Prijava</a>
+                        <a onClick={toRegister} type="button" className="btn btn-primary link-dark">Registracija</a>
                     </div>
                     <a></a>
                 </header>
